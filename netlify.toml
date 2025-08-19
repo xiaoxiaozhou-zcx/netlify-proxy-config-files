@@ -1,0 +1,16 @@
+[build]
+  # 对于纯代理场景，不需要构建命令和输出目录
+  command = ""
+  publish = "."
+
+[build.environment]
+  # 可选：设置环境变量（如果需要）
+  # PROXY_TARGET = "http://43.174.14.129"
+
+[redirects]
+  # 确保重定向规则生效
+  from = "/*"
+  to = "http://43.174.14.129/:splat"
+  status = 200
+  force = true
+  headers = {Host = "zby.130519.xyz"}
