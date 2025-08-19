@@ -1,2 +1,10 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "https://43.174.14.129/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    Host = "zby.130519.xyz"
